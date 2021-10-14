@@ -4,5 +4,11 @@
  * @returns {*[]} - the new array with uniq values
  */
 export function uniq(arr) {
-
+    const resultArr = [];
+    for (const item of arr ?? []) {
+        if (!resultArr.includes(item)){
+            resultArr.push(item);
+        }
+    }
+    return resultArr;
 }
